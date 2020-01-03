@@ -1,6 +1,12 @@
 
 
 function runApp() {
+    function hello() {
+        console.log("Hello World");
+    }
+    
+    hello();
+
     const firstName = 'Filip'; // String
     const lastName = 'Jerga';
 
@@ -8,6 +14,7 @@ function runApp() {
     const lastName2 = 'Green';
 
     function sayHello(fName, lName) {
+        hello();
         console.log('Hello ' + fName + ' ' + lName);
     }
 
