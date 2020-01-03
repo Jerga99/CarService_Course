@@ -1,26 +1,20 @@
 
 
-// VARIABLES
+function runApp() {
+    const firstName = 'Filip'; // String
+    const lastName = 'Jerga';
 
-let isEmployed = true; // Boolean
-let hasApartment = false;
+    const firstName2 = 'John';
+    const lastName2 = 'Green';
 
-let firstName = 'Filip'; // String
-let lastName = 'Jerga';
-let age = 29; // Number
+    function sayHello(fName, lName) {
+        console.log('Hello ' + fName + ' ' + lName);
+    }
 
-let birthday; // Undefined
+    sayHello(firstName, lastName);
+    sayHello(firstName2, lastName2);
+    sayHello("Martha", "Doppler");
+}
 
-let phone = null; // Null
+runApp();
 
-let fullName = 'Filip Jerga';
-
-fullName = 'John Green';
-
-console.log(fullName);
-
-console.log('Name: ' + firstName + ' ' + lastName + ' ,age: ' + age);
-
-console.log(birthday);
-
-console.log(phone);
