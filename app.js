@@ -1,40 +1,22 @@
 
 
-// var
-  // function scope
-  // undefined in case i am accesing variable before declaration
-
-// let
-  // block
-  // ReferenceError in case i am accesing variable before declaration
-
-// const
-  // block
-  // ReferenceError in case i am accesing variable before declaration
-  // const assign value only once 
-
-// Hoisting
 function runApp() {
-    console.log(firstName2);
-    var firstName = 'Filip'; // String
-    var lastName = 'Jerga';
+    const brand = 'mercedes';
+    const type = 'benz';
+    const produceYear = 1995;
 
-    let firstName2 = 'John';
-    const lastName2 = 'Green';
+    const brand2 = 'mitshubishi';
+    const type2 = 'lancer';
+    const produceYear2 = 2002;
 
-    {
-        var fScope = 'Function Scope!';
-        let bScope = 'Block Scope';
+    // displayCarInfo
+    // params: brand, type, year
+    function displayCarInfo(brand, type, year) {
+        console.log(`${brand} ${type} - ${year}`);
     }
 
-    function sayHello(fName, lName) {
-        console.log(fScope);
-        console.log('Hello ' + fName + ' ' + lName);
-    }
-
-    sayHello(firstName, lastName);
-    sayHello(firstName2, lastName2);
-    sayHello("Martha", "Doppler");
+    displayCarInfo(brand, type, produceYear);
+    displayCarInfo(brand2, type2, produceYear2);
 }
 
 runApp();
