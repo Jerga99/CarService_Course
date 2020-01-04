@@ -1,39 +1,32 @@
 
 
+class Car {
+  brand = '';
+  type = '';
+  produceYear = null;
+
+  constructor(brand, type, produceYear) {
+    this.brand = brand;
+    this.type = type;
+    this.produceYear = produceYear;
+  }
+
+  displayInfo() {
+    console.log(`${this.brand} ${this.type} - ${this.produceYear}`); 
+    return true;
+  }
+}
+
+
 function runApp() {
-  // object
-  const car = {
-    brand: 'mercedes',
-    type: 'benz',
-    produceYear: 1995,
-    displayInfo: function() {
-      console.log(`${this.brand} ${this.type} - ${this.produceYear}`);
-    },
-    getThis: function() {
-      return this;
-    }
-  }
-
-  console.log(car === car.getThis());
-
-  const car2 = {
-    brand: 'mitshubishi',
-    type: 'lancer',
-    produceYear: 2002 
-  }
-
-  // displayCarInfo
-  // params: brand, type, year
-  function displayCarInfo(car) {
-    console.log(`${car.brand} ${car.type} - ${car.produceYear}`);
-    return function() {
-      console.log('I AM FUNCTION')
-    }
-  }
-
-  displayCarInfo(car)();
-  const testFunction = displayCarInfo(car2);
-  testFunction();
+  const car = new Car('mercedes', 'benz', 1995);
+  const car2 = new Car('mitshubishi', 'lancer', 2002);
+  // car['brand'] = 'mercedes';
+  // car.type = 'benz';
+  // car.produceYear = 1995;
+  
+  car.displayInfo();
+  car2.displayInfo();
 }
 
 runApp();
