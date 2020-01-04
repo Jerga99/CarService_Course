@@ -1,22 +1,30 @@
 
 
 function runApp() {
-    const brand = 'mercedes';
-    const type = 'benz';
-    const produceYear = 1995;
+  // object
+  const car = {
+      brand: 'mercedes',
+      type: 'benz',
+      produceYear: 1995,
+      displayInfo: function() {
+        console.log(`${this.brand} ${this.type} - ${this.produceYear}`);
+      }
+  }
 
-    const brand2 = 'mitshubishi';
-    const type2 = 'lancer';
-    const produceYear2 = 2002;
+  const car2 = {
+      brand: 'mitshubishi',
+      type: 'lancer',
+      produceYear: 2002 
+  }
 
-    // displayCarInfo
-    // params: brand, type, year
-    function displayCarInfo(brand, type, year) {
-        console.log(`${brand} ${type} - ${year}`);
-    }
+  // displayCarInfo
+  // params: brand, type, year
+  function displayCarInfo(car) {
+      console.log(`${car.brand} ${car.type} - ${car.produceYear}`);
+  }
 
-    displayCarInfo(brand, type, produceYear);
-    displayCarInfo(brand2, type2, produceYear2);
+  displayCarInfo(car);
+  displayCarInfo(car2);
 }
 
 runApp();
