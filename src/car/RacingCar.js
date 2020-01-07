@@ -12,6 +12,12 @@ class RacingCar extends Car {
   racingCarFunction() {
     console.log('racing car function');
   }
+
+  // displayInfo() {
+  //   super.displayInfo(this.category);
+  //   // console.log(this.category); 
+  //   return true;
+  // }
   
 }
 

@@ -11,10 +11,16 @@ class Car {
     this.produceYear = produceYear;
   }
 
-  displayInfo() {
-    console.log(`${this.brand} ${this.type} - ${this.produceYear}`); 
-    return true;
-  }
+  // displayInfo(additionalInfo) {
+
+  //   if (additionalInfo) {
+  //     console.log(`${this.brand} ${this.type} - ${this.produceYear} - ${additionalInfo}`); 
+  //   } else {
+  //     console.log(`${this.brand} ${this.type} - ${this.produceYear}`); 
+  //   }
+
+  //   return true;
+  // }
 }
 
 module.exports = Car;
