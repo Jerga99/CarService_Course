@@ -21,14 +21,21 @@ function runApp() {
 
   const cars = [car, car2];
 
-  cars[0].displayInfo();
-  cars[1].displayInfo();
+  // for(let i = 0; i < cars.length; i++) {
+  //   if (cars[i].brand === 'mitshubishi') {
+  //     cars[i].displayInfo();
+  //   }
+  // }
 
+  // cars.forEach(function(a) {
+  //   a.displayInfo();
+  // })
 
-  for(let i = 0; i < 10; i++) {
-    console.log(i);
-  }
-
+  // let i = 0;
+  // while(i < 10) {
+  //   console.log(i);
+  //   i++;
+  // }
 
 }
 
