@@ -7,21 +7,15 @@ Object.prototype.displayInfo = function() {
 }
 
 function runApp() {
-  const car = new Car('mercedes', 'benz', 1995);
-  const car2 = new Car('mitshubishi', 'lancer', 2002);
+  const car = new Car({brand: 'mercedes', type: 'benz', year: 1995});
+  const car2 = new Car({type: 'lancer', brand: 'mitshubishi', year: 2002});
 
-  const racingCar = new RacingCar('subaru', 'impreza', 2010, 'k1');
+  const racingCar = new RacingCar({category: 'k1', brand: 'subaru', type: 'impreza', year: 2010});
 
   racingCar.displayInfo();
   car.displayInfo();
-
-  "".displayInfo();
-  true.displayInfo();
-  (19).displayInfo();
-  [].displayInfo();
                           
   const cars = [car, car2, racingCar];
-  cars.displayInfo();
 }
 
 runApp();

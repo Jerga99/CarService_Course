@@ -4,8 +4,8 @@ const Car = require('./Car');
 class RacingCar extends Car {
   category = '';
 
-  constructor(brand, type, year, category) {
-    super(brand, type, year);
+  constructor({category, ...carParams}) {
+    super(carParams);
     this.category = category;
   }
   
@@ -13,11 +13,11 @@ class RacingCar extends Car {
     console.log('racing car function');
   }
 
-  // displayInfo() {
-  //   super.displayInfo(this.category);
-  //   // console.log(this.category); 
-  //   return true;
-  // }
+  displayInfo() {
+    super.displayInfo(this.category);
+    // console.log(this.category); 
+    return true;
+  }
   
 }
 

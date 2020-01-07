@@ -5,22 +5,22 @@ class Car {
   type = '';
   produceYear = null;
 
-  constructor(brand, type, produceYear) {
-    this.brand = brand;
-    this.type = type;
-    this.produceYear = produceYear;
+  constructor(carData) {
+    this.brand = carData.brand;
+    this.type = carData.type;
+    this.produceYear = carData.year;
   }
 
-  // displayInfo(additionalInfo) {
+  displayInfo(additionalInfo) {
 
-  //   if (additionalInfo) {
-  //     console.log(`${this.brand} ${this.type} - ${this.produceYear} - ${additionalInfo}`); 
-  //   } else {
-  //     console.log(`${this.brand} ${this.type} - ${this.produceYear}`); 
-  //   }
+    if (additionalInfo) {
+      console.log(`${this.brand} ${this.type} - ${this.produceYear} - ${additionalInfo}`); 
+    } else {
+      console.log(`${this.brand} ${this.type} - ${this.produceYear}`); 
+    }
 
-  //   return true;
-  // }
+    return true;
+  }
 }
 
 module.exports = Car;
