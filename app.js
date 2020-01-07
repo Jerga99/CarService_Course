@@ -2,6 +2,8 @@
 const Car = require('./src/car/Car');
 const RacingCar = require('./src/car/RacingCar');
 
+const i = require('./src/lib/i');
+
 Object.prototype.displayInfo = function() {
   console.log('DISPLAYING OBJECT INFO!!!!!!');
 }
@@ -26,15 +28,29 @@ function runApp() {
   //   car.displayInfo();
   // }
 
-  const carBrands = cars.map(function(car) {
+  // const carBrands = cars.map(function(car) {
+  //   return car.brand;
+  // })
+
+  const carBrands = i.map(cars, function(car) {
     return car.brand;
   })
 
-  const filteredCars = cars.filter(function(car) {
+  // console.log(carBrands);
+
+  const filteredCars = i.filter(cars, function(car) {
     return car.brand === 'bmw';
   })
 
   console.log(filteredCars);
+
+  // const filteredCars = cars.filter(function(car) {
+  //   return car.brand === 'bmw';
+  // })
+
+  // i.forEach(cars, function(car) {
+  //   car.displayInfo();
+  // })
 
   // cars.forEach2(function(car) {
   //   car.displayInfo();
