@@ -1,7 +1,8 @@
 
 const Promise = require('./Promise');
 // TODO: Destructurization
-const { Observable } = require('rxjs');
+// const { Observable } = require('rxjs');
+const { Observable } = require('./Observable');
 
 const i = (function() {
 
