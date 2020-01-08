@@ -62,7 +62,14 @@ const runTestApp = function(){
   if ((car.brand === 'mercedes' && car.type === 'lancer') && car.produceYear === 1995 ) {
     console.log('Its mercedez bens');
   }
+
+  const data = i.getDBdata(dbData => {
+    console.log(dbData);
+  });
+  
+  console.log(data);
+
+  console.log('finishing of runTestApp!');
 }
 
 runTestApp();
-

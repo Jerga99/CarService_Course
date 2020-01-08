@@ -3,6 +3,16 @@
 const i = (function() {
 
   return {
+    getDBdata: function(callback) {
+
+      setTimeout(() => {
+        const data = 'Data from DB!';
+        callback(data);
+      }, 3000)
+
+      console.log('before finishing of getDBdata!');
+      return true;
+    },
     getCurrentDate: function(callback) {
       const date = new Date().toUTCString();
       callback(date);
