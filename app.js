@@ -1,19 +1,10 @@
 
 const Car = require('./src/car/Car');
 const RacingCar = require('./src/car/RacingCar');
+const readline = require('readline-sync');
 
 const i = require('./src/lib/i');
 
-Object.prototype.displayInfo = function() {
-  console.log('DISPLAYING OBJECT INFO!!!!!!');
-}
-
-Array.prototype.forEach2 = function(callback) {
-
-  for (let i = 0; i < this.length; i++) {
-    callback(this[i]);
-  }
-}
 
 function runApp() {
   const car = new Car({brand: 'mercedes', type: 'benz', year: 1995});
@@ -24,37 +15,16 @@ function runApp() {
                         
   const cars = [car, car2, racingCar, car3, car4];
 
-  // function displayCarInfo(car) {
-  //   car.displayInfo();
-  // }
+  let appIsRunning = true;
+  while(appIsRunning) {
+    let userInput = readline.question('Write me something: ');
+    console.log(userInput);
 
-  // const carBrands = cars.map(function(car) {
-  //   return car.brand;
-  // })
-
-  const carBrands = i.map(cars, function(car) {
-    return car.brand;
-  })
-
-  // console.log(carBrands);
-
-  const filteredCars = i.filter(cars, function(car) {
-    return car.brand === 'bmw';
-  })
-
-  console.log(filteredCars);
-
-  // const filteredCars = cars.filter(function(car) {
-  //   return car.brand === 'bmw';
-  // })
-
-  // i.forEach(cars, function(car) {
-  //   car.displayInfo();
-  // })
-
-  // cars.forEach2(function(car) {
-  //   car.displayInfo();
-  // })
+    if (userInput.toLowerCase() === 'exit') {
+      console.log('Good Bye!');
+      appIsRunning = false;
+    }
+  }
 }
 
 runApp();
