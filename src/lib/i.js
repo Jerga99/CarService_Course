@@ -1,17 +1,32 @@
 
 const Promise = require('./Promise');
+// TODO: Destructurization
+const { Observable } = require('rxjs');
 
 const i = (function() {
 
   return {
     getDBdata: function() {
 
-      return new Promise((resolve, reject) => {
+      // return new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     const data = 'Data from DB!';
+      //     resolve(data);
+      //     // reject('Cannot connect to DB!');
+      //   }, 3000)
+      // })
+
+      return new Observable((observer) => {
         setTimeout(() => {
-          const data = 'Data from DB!';
-          resolve(data);
-          // reject('Cannot connect to DB!');
-        }, 3000)
+          observer.next('Data from DB!');
+          observer.next('adsadaddda');
+          // observer.complete();
+          // observer.error('Some error');
+          
+          setTimeout(() => {
+            observer.next('Delayed Data!')
+          }, 2000)
+        }, 3000);
       })
     },
     getCurrentDate: function(callback) {

@@ -63,26 +63,14 @@ const runTestApp = async function(){
     console.log('Its mercedez bens');
   }
 
-  const data = await i.getDBdata()
-    .then((dbData) => {
-      return dbData + ' Added Data';
-    })
-    .then((changedData) => {
-      return changedData;
-    })
-    .then((data) => {
-      // throw new Error('Something wrong happend');
-      return data.substr(2, 9);
-    })
-    .then((data) => {
-      return data;
-    })
-    .catch((errorMessage) => {
-      console.log(errorMessage);
-    })
+  i.getDBdata().subscribe((data) => {
+    console.log(data);
+  }, (error) => {
+    console.log(error);
+  }, () => {
+    console.log('Finished!')
+  })
 
-
-  console.log(data);
 
   console.log('finishing of runTestApp!');
 }

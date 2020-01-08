@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "rxjs": "^6.5.4"
   },
   "devDependencies": {},
   "scripts": {
