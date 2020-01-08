@@ -7,6 +7,13 @@ const i = require('./src/lib/i');
 
 
 function runApp() {
+  function displayOptions() {
+    console.log('Press "1" to add a car');
+    console.log('Press "2" to remove a car');
+    console.log('Press "3" to list all of the cars');
+    console.log('Press "exit" to quit to program');
+  }
+
   const car = new Car({brand: 'mercedes', type: 'benz', year: 1995});
   const car2 = new Car({type: 'lancer', brand: 'mitshubishi', year: 2002});
   const car3 = new Car({type: 'x6', brand: 'bmw', year: 2000});
@@ -16,13 +23,24 @@ function runApp() {
   const cars = [car, car2, racingCar, car3, car4];
 
   let appIsRunning = true;
-  while(appIsRunning) {
-    let userInput = readline.question('Write me something: ');
-    console.log(userInput);
+  displayOptions();
 
-    if (userInput.toLowerCase() === 'exit') {
+  while(appIsRunning) {
+    let userInput = readline.question('Write me something: ').toLowerCase();
+    
+    if (userInput === '1') {
+      console.log('Creating car');
+    } else if (userInput === '2') {
+      console.log('removing car car');
+    } else if (userInput === '3') {
+      cars.forEach(function(car) {
+        car.displayInfo();
+      });
+    } else if (userInput === 'exit') {
       console.log('Good Bye!');
       appIsRunning = false;
+    } else {
+      console.log('Invalid Option!');
     }
   }
 }
