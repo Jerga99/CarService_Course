@@ -37,7 +37,8 @@ function runApp() {
         carStorage.addCar(newCar);
         break;
       case '2':
-        console.log('removing car car');
+        const carId = carManager.askQuestion('Provide car id: \n');
+        carStorage.removeCar(carId);
         break;
       case '3':
         carStorage.listCars();

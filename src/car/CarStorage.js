@@ -12,8 +12,17 @@ class CarStorage {
     this.cars.push(car);
   }
 
-  removeCar() {
+  removeCar(carId) {
+    const carIndex = this.cars.findIndex(function(car) {
+      return car.id === carId
+    })
 
+    if (carIndex === -1) { 
+      console.log('The car doesnt exist!');
+      return; 
+    }
+
+    this.cars.splice(carIndex, 1);
   }
 
   listCars() {
