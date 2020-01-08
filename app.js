@@ -27,21 +27,41 @@ function runApp() {
 
   while(appIsRunning) {
     let userInput = readline.question('Write me something: ').toLowerCase();
-    
-    if (userInput === '1') {
-      console.log('Creating car');
-    } else if (userInput === '2') {
-      console.log('removing car car');
-    } else if (userInput === '3') {
-      cars.forEach(function(car) {
-        car.displayInfo();
-      });
-    } else if (userInput === 'exit') {
-      console.log('Good Bye!');
-      appIsRunning = false;
-    } else {
-      console.log('Invalid Option!');
+
+    switch(userInput) {
+      case '1': 
+        console.log('Creating car');
+        break;
+      case '2':
+        console.log('removing car car');
+        break;
+      case '3':
+        cars.forEach(function(car) {
+          car.displayInfo();
+        });
+        break;
+      case 'exit':
+        console.log('Good Bye!');
+        appIsRunning = false;
+        break;
+      default:
+        console.log('Invalid Option!');
     }
+    
+    // if (userInput === '1') {
+    //   console.log('Creating car');
+    // } else if (userInput === '2') {
+    //   console.log('removing car car');
+    // } else if (userInput === '3') {
+      // cars.forEach(function(car) {
+      //   car.displayInfo();
+      // });
+    // } else if (userInput === 'exit') {
+      // console.log('Good Bye!');
+      // appIsRunning = false;
+    // } else {
+    //   console.log('Invalid Option!');
+    // }
   }
 }
 
