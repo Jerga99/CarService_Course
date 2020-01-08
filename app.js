@@ -55,7 +55,7 @@ function runApp() {
 
 // runApp();
 
-const runTestApp = function(){
+const runTestApp = async function(){
   const car = new Car({brand: 'mercedes', type: 'benz', year: 1995});
   car.setCarDate();
 
@@ -63,11 +63,31 @@ const runTestApp = function(){
     console.log('Its mercedez bens');
   }
 
-  const data = i.getDBdata(dbData => {
-    console.log(dbData);
-  });
-  
-  console.log(data);
+  // car.testingFunction((data) => {
+  //   return data + 'askjdankdj';
+  // }).testingFunction((data) => {
+  //   return data + "8768677667";
+  // }).displayInfo()
+
+  // const data = await i.getDBdata()
+  //   .then((dbData) => {
+  //     return dbData + ' Added Data';
+  //   })
+  //   .then((changedData) => {
+  //     return changedData;
+  //   })
+  //   .then((data) => {
+  //     return data.substr(2, 9);
+  //   })
+  //   .then((data) => {
+  //     return data;
+  //   })
+  //   .catch((errorMessage) => {
+  //     console.log(errorMessage);
+  //   })
+
+
+  // console.log(data);
 
   console.log('finishing of runTestApp!');
 }

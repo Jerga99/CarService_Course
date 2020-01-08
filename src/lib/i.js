@@ -3,15 +3,15 @@
 const i = (function() {
 
   return {
-    getDBdata: function(callback) {
+    getDBdata: function() {
 
-      setTimeout(() => {
-        const data = 'Data from DB!';
-        callback(data);
-      }, 3000)
-
-      console.log('before finishing of getDBdata!');
-      return true;
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const data = 'Data from DB!';
+          resolve(data);
+          // reject('Cannot connect to DB!');
+        }, 3000)
+      })
     },
     getCurrentDate: function(callback) {
       const date = new Date().toUTCString();

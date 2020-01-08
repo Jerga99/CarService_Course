@@ -7,6 +7,8 @@ class Car {
   produceYear = null;
   id = null;
 
+  testingData = 'Testing Data'
+
   constructor(carData) {
     this.brand = carData.brand;
     this.type = carData.type;
@@ -15,6 +17,12 @@ class Car {
   }
 
   getDate = date => this.carDate = date;
+
+  testingFunction(callback) {
+    this.testingData = callback(this.testingData);
+
+    return this;
+  }
   
   setCarDate() {
     i.getCurrentDate(this.getDate);
