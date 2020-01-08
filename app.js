@@ -1,5 +1,6 @@
 
 const CarStorage = require('./src/car/CarStorage'); 
+const CarManager = require('./src/car/CarManager'); 
 const Car = require('./src/car/Car');
 const RacingCar = require('./src/car/RacingCar');
 const readline = require('readline-sync');
@@ -22,13 +23,7 @@ function runApp() {
                       
   const cars = [car, car2, racingCar, car3, car4];
   const carStorage = new CarStorage([...cars]);
-
-  // copying by reference - Objects, Arrays
-  // copying by value - string, boolean, numbers ....
-
-  // cars.forEach(function(car) {
-  //   carStorage.addCar(car);
-  // })
+  const carManager = new CarManager();
 
   let appIsRunning = true;
   displayOptions();
@@ -38,7 +33,8 @@ function runApp() {
 
     switch(userInput) {
       case '1': 
-        console.log('Creating car');
+        const newCar = carManager.createCar();
+        carStorage.addCar(newCar);
         break;
       case '2':
         console.log('removing car car');
