@@ -13,9 +13,7 @@ class CarStorage {
   }
 
   removeCar(carId) {
-    const carIndex = this.cars.findIndex(function(car) {
-      return car.id === carId
-    })
+    const carIndex = this.cars.findIndex(car => car.id === carId )
 
     if (carIndex === -1) { 
       console.log('The car doesnt exist!');
@@ -30,13 +28,9 @@ class CarStorage {
       console.log('No cars in the list!');
       return;
     }
-
-    // TODO: arrow function
-    this.cars.forEach(function(car) {
-      car.displayInfo();
-    })
+        
+    this.cars.forEach(car => car.displayInfo())
   }
-
 }
 
 module.exports = CarStorage;

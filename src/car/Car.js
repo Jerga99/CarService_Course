@@ -11,21 +11,8 @@ class Car {
     this.brand = carData.brand;
     this.type = carData.type;
     this.produceYear = carData.year;
-    this.id = '_' + Math.random().toString(36).substr(2, 9)
-
-    // this.getDate = this.getDate.bind(this);
+    this.id = '_' + Math.random().toString(36).substr(2, 9);
   }
-
-  // setCarDate() {
-  //   i.getCurrentDate(date => this.carDate = date)
-  // }
-
-  // setCarDate() {
-  //   const self = this;
-  //   i.getCurrentDate(function(date) {
-  //     self.carDate = date;
-  //   })
-  // }
 
   getDate = date => this.carDate = date;
   
