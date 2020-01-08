@@ -1,4 +1,5 @@
 
+const Promise = require('./Promise');
 
 const i = (function() {
 

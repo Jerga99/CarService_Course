@@ -17,12 +17,6 @@ class Car {
   }
 
   getDate = date => this.carDate = date;
-
-  testingFunction(callback) {
-    this.testingData = callback(this.testingData);
-
-    return this;
-  }
   
   setCarDate() {
     i.getCurrentDate(this.getDate);

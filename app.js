@@ -63,31 +63,26 @@ const runTestApp = async function(){
     console.log('Its mercedez bens');
   }
 
-  // car.testingFunction((data) => {
-  //   return data + 'askjdankdj';
-  // }).testingFunction((data) => {
-  //   return data + "8768677667";
-  // }).displayInfo()
-
-  // const data = await i.getDBdata()
-  //   .then((dbData) => {
-  //     return dbData + ' Added Data';
-  //   })
-  //   .then((changedData) => {
-  //     return changedData;
-  //   })
-  //   .then((data) => {
-  //     return data.substr(2, 9);
-  //   })
-  //   .then((data) => {
-  //     return data;
-  //   })
-  //   .catch((errorMessage) => {
-  //     console.log(errorMessage);
-  //   })
+  const data = await i.getDBdata()
+    .then((dbData) => {
+      return dbData + ' Added Data';
+    })
+    .then((changedData) => {
+      return changedData;
+    })
+    .then((data) => {
+      // throw new Error('Something wrong happend');
+      return data.substr(2, 9);
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((errorMessage) => {
+      console.log(errorMessage);
+    })
 
 
-  // console.log(data);
+  console.log(data);
 
   console.log('finishing of runTestApp!');
 }
