@@ -53,5 +53,12 @@ function runApp() {
   }
 }
 
-runApp();
+// runApp();
+
+const runTestApp = function(){
+  const car = new Car({brand: 'mercedes', type: 'benz', year: 1995});
+  car.setCarDate();
+}
+
+runTestApp();
 

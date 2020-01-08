@@ -3,6 +3,10 @@
 const i = (function() {
 
   return {
+    getCurrentDate: function(callback) {
+      const date = new Date().toUTCString();
+      callback(date);
+    },
     forEach: function(list, callback) {
       for(let i = 0; i < list.length; i++) {
         callback(list[i]);

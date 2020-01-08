@@ -1,4 +1,5 @@
 
+const i = require('../lib/i');
 
 class Car {
   brand = '';
@@ -11,10 +12,28 @@ class Car {
     this.type = carData.type;
     this.produceYear = carData.year;
     this.id = '_' + Math.random().toString(36).substr(2, 9)
+
+    // this.getDate = this.getDate.bind(this);
+  }
+
+  // setCarDate() {
+  //   i.getCurrentDate(date => this.carDate = date)
+  // }
+
+  // setCarDate() {
+  //   const self = this;
+  //   i.getCurrentDate(function(date) {
+  //     self.carDate = date;
+  //   })
+  // }
+
+  getDate = date => this.carDate = date;
+  
+  setCarDate() {
+    i.getCurrentDate(this.getDate);
   }
 
   displayInfo(additionalInfo) {
-
     if (additionalInfo) {
       console.log(`${this.id}: ${this.brand} ${this.type} - ${this.produceYear} - ${additionalInfo}`); 
     } else {
