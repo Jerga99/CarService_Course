@@ -53,12 +53,16 @@ function runApp() {
   }
 }
 
-runApp();
+// runApp();
 
 const runTestApp = function(){
   const car = new Car({brand: 'mercedes', type: 'benz', year: 1995});
   car.setCarDate();
+
+  if ((car.brand === 'mercedes' && car.type === 'lancer') && car.produceYear === 1995 ) {
+    console.log('Its mercedez bens');
+  }
 }
 
-// runTestApp();
+runTestApp();
 
