@@ -22,7 +22,9 @@ const i = (function() {
           observer.next('Data from DB!');
           observer.next('adsadaddda');
           // observer.complete();
-          // observer.error('Some error');
+          observer.error('Some error');
+          observer.next('98ad7a8s97d');
+          observer.next('asdasddasd89dasd7a');
           
           setTimeout(() => {
             observer.next('Delayed Data!')
